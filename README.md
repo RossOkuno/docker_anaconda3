@@ -23,6 +23,6 @@ You can install libaries with codna
 conda install -c conda-forge fbprophet
 ```
 Trash container image
-'''
+```
 docker-compose down --rmi all --volumes
-'''
+```
