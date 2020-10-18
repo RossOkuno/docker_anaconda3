@@ -12,4 +12,9 @@ ENV PATH /opt/anaconda3/bin:$PATH
 
 RUN pip install --upgrade pip
 WORKDIR / 
+
+#追加ライブラリ
+RUN conda update -n base -c defaults conda
+RUN conda install -c conda-forge fbprophet -y
+
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--LabApp.token=''"]
